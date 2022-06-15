@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-14 10:21+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\jpiu_app\templates\base.html:11
+msgid "Объединённая группа реализации проектов"
+msgstr "Birlashtirilgan Loyihalarni Amalga Oshirish Guruhi"
+
+#: .\jpiu_app\templates\components\_footer.html:12
+msgid "Присоединяйтесь к нам в социальных сетях:"
+msgstr "Ijtimoiy tarmoqlarda bizga qo'shiling:"
+
+#: .\jpiu_app\templates\components\_footer.html:58
+msgid "Ссылки"
+msgstr "Havolalar"
+
+#: .\jpiu_app\templates\components\_footer.html:61
+#: .\jpiu_app\templates\components\_nav.html:71
+#: .\jpiu_app\templates\jpiu_app\home_page.html:35
+#: .\jpiu_app\templates\jpiu_app\news.html:14
+msgid "Новости"
+msgstr "Yangiliklar"
+
+#: .\jpiu_app\templates\components\_footer.html:64
+#: .\jpiu_app\templates\components\_nav.html:72
+msgid "Проекты"
+msgstr "Loyihalar"
+
+#: .\jpiu_app\templates\components\_footer.html:67
+#: .\jpiu_app\templates\components\_nav.html:73
+msgid "Документы"
+msgstr "Hujjatlar"
+
+#: .\jpiu_app\templates\components\_footer.html:70
+#: .\jpiu_app\templates\components\_nav.html:74
+msgid "О нас"
+msgstr "Biz haqimizda"
+
+#: .\jpiu_app\templates\components\_footer.html:73
+#: .\jpiu_app\templates\components\_footer.html:108
+#: .\jpiu_app\templates\components\_nav.html:75
+msgid "Контакты"
+msgstr "Aloqalar"
+
+#: .\jpiu_app\templates\components\_footer.html:76
+#: .\jpiu_app\templates\components\_nav.html:76
+msgid "FAQ"
+msgstr ""
+
+#: .\jpiu_app\templates\components\_footer.html:84
+msgid "Часы работы"
+msgstr "Ish vaqti"
+
+#: .\jpiu_app\templates\components\_footer.html:89
+msgid "Пон-Пят"
+msgstr "Dush-Jum"
+
+#: .\jpiu_app\templates\components\_footer.html:93
+msgid "Суб"
+msgstr "Shan"
+
+#: .\jpiu_app\templates\components\_footer.html:94
+#: .\jpiu_app\templates\components\_footer.html:98
+msgid "Выходной"
+msgstr "Yopiq"
+
+#: .\jpiu_app\templates\components\_footer.html:97
+msgid "Вос"
+msgstr "Yak"
+
+#: .\jpiu_app\templates\components\_footer.html:112
+#: .\jpiu_app\templates\components\_nav.html:14
+msgid "45A Ave Islam Karimov, Tashkent, Uzbekistan, 100003"
+msgstr "O‘zbekiston, 100003, Toshkent, Islom Karimov shoh ko‘chasi, 45A"
+
+#: .\jpiu_app\templates\components\_footer.html:131
+msgid "МИНИСТЕРСТВО ЭКОНОМИЧЕСКОГО РАЗВИТИЯ И СОКРАЩЕНИЯ БЕДНОСТИ РЕСПУБЛИКИ УЗБЕКИСТАН"
+msgstr "O‘ZBEKISTON RESPUBLIKASI IQTISODIY TARAQQIYOT VA KAMBAG'ALLIKNI QISQARTIRISH VAZIRLIGI"
+
+#: .\jpiu_app\templates\jpiu_app\home_page.html:7
+#: .\jpiu_app\templates\jpiu_app\our-projects.html:14
+msgid "Наши проекты"
+msgstr "Bizning loyihalar"
+
+#: .\jpiu_app\templates\jpiu_app\home_page.html:15
+#: .\jpiu_app\templates\jpiu_app\our-projects.html:29
+msgid "Проект развития сельской инфраструктуры"
+msgstr "Qishloq infratuzilmasini rivojlantirish loyihasi"
+
+#: .\jpiu_app\templates\jpiu_app\home_page.html:18
+#: .\jpiu_app\templates\jpiu_app\our-projects.html:32
+msgid ""
+"Министерство экономического развития и сокращения бедности в 2020-2024 гг. "
+"реализует проект «Развитие сельской инфраструктуры», в рамках которого более "
+"300 сел в Андижанской, Ферганской, Наманганской, Джизакской и Сырдарьинской "
+"областях Узбекистана смогут получить финансирование для улучшения качества "
+"базовой социальной инфраструктуры в данных населенных пунктах."
+msgstr "Iqtisodiy Taraqqiyot va kambag'allikni qisqartirish vazirligi 2020-2024-yillarda “Qishloq infratuzilmasini rivojlantirish” loyihasini amalga oshirmoqda, unga ko‘ra O‘zbekistonning Andijon, Farg‘ona, Namangan, Jizzax va Sirdaryo viloyatlaridagi 300 dan ortiq qishloqlar ushbu aholi punktlarining asosiy ijtimoiy infratuzilmalari sifatini yaxshilash uchun mablag‘ olishlari mumkin."
+
+#: .\jpiu_app\templates\jpiu_app\home_page.html:28
+#: .\jpiu_app\templates\jpiu_app\our-projects.html:42
+msgid "Устойчивое развитие сельской местности"
+msgstr "Qishloq infratuzilmasini barqaror rivojlantirish loyihasi"
+
+#: .\jpiu_app\templates\jpiu_app\home_page.html:30
+#: .\jpiu_app\templates\jpiu_app\our-projects.html:44
+msgid ""
+"Проект «Устойчивое развитие сельской местности» с участием Исламского банка "
+"развития и Фонда ОПЕК по международному развитию"
+msgstr "Islom taraqqiyot banki va OPEK Xalqaro taraqqiyot jamg‘armasi ishtirokidagi Qishloq infratuzilmasini barqaror rivojlantirish loyihasi"
+
+#: .\jpiu_app\templates\jpiu_app\home_page.html:89
+msgid "Все новости"
+msgstr "Barcha yangiliklar"
+
+#: .\jpiu_app\templates\jpiu_app\news_details.html:337
+msgid "Поделиться"
+msgstr "Ulashish"
+
+#: .\jpiu_app\templates\jpiu_app\news_details.html:339
+msgid "опубликовать в Твиттере"
+msgstr "Twitterda e'lon qilish"
+
+#: .\jpiu_app\templates\jpiu_app\news_details.html:341
+msgid "Отправить в телеграм"
+msgstr "Telegramda yuborish"

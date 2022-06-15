@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% translate "Объединённая группа реализации проектов" %}</title>
+    <link rel="icon" href="{% static '/jpiu_app/img-core/Logo_icon.ico' %}">
+    <link rel="stylesheet" href="{% static '/jpiu_app/css/style.css' %}">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static '/jpiu_app/css/mdb.min.css' %}">
+
+</head>
+<body>
+{% include 'components/_nav.html' %}
+{% include 'components/_messages.html' %}
+{% block content %} {% endblock content %}
+<button
+        type="button"
+        class="btn btn-primary btn-floating btn-lg mb-5"
+        id="btn-back-to-top">
+    <i class="p-0 fas fa-arrow-up"></i>
+</button>
+
+{% include 'components/_footer.html' %}
+
+
+<!--<script src="{% static '/jpiu_app/js/bootstrap.bundle.min.js' %}"></script>-->
+<script src="{% static '/jpiu_app/js/mdb.min.js' %}"></script>
+<script src="{% static '/jpiu_app/js/button_top.js' %}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="row-fluid mb-5">
+    <div class="bg-image"
+         style="background-image: url({% static 'jpiu_app/img-core/bg-images/bg-img-news.png' %});
+                height: 300px;">
+
+        <div class="mask" style="background-color: rgba(15, 15, 100, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <p class="text-white mb-0 h1">{% translate 'Новости' %}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% block detail %}
+<div class="container">
+    <div class="row-fluid mt-5">
+        {% for list in news %}
+        <div class="card mb-3" style="max-width: ;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <a href="{% url 'news_details' pk=list.pk %}" class="ripple">
+                        {% if list.image_uz %}
+                        {% if LANGUAGE_CODE == 'en' and list.image %}
+                        <img src="{{ list.image.url }}" class="img-fluid rounded-start"
+                             alt="news">
+                        {% elif LANGUAGE_CODE == 'ru' and list.image_ru %}
+                        <img src="{{ list.image_ru.url }}" class="img-fluid rounded-start"
+                             alt="news">
+                        {% else %}
+                        <img src="{{ list.image_uz.url }}" class="img-fluid rounded-start"
+                             alt="news">
+                        {% endif %}
+                        {% else %}
+                        <img src="{% static 'jpiu_app/img-core/ibr_logo2.jpg' %}" class="img-fluid rounded-start"
+                             alt="news">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'news_details' pk=list.pk %}" class="">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ list.title_en|truncatechars:80}}
+                            {% elif LANGUAGE_CODE == 'ru' %}
+                                {{ list.title_ru|truncatechars:80 }}
+                            {% elif LANGUAGE_CODE == 'uz' %}
+                                {{ list.title_uz|truncatechars:80 }}
+                            {% endif %}
+                        </a></h5>
+                        <p class="card-text">
+                            {% if LANGUAGE_CODE == 'en' %}
+                            {{ list.description_en|default_if_none:""|linebreaksbr}}
+                            {% elif LANGUAGE_CODE == 'ru' %}
+                            {{ list.description_ru|default_if_none:""|linebreaksbr }}
+                            {% elif LANGUAGE_CODE == 'uz' %}
+                            {{ list.description_uz|default_if_none:""|linebreaksbr }}
+                            {% endif %}
+                        </p>
+                        <p class="card-text"><small class="text-muted">
+                            <a href="#!" style="margin-right: 10px"><i class="far fa-calendar"></i> {{list.date}}</a>
+                            <a href="#!"><i class="fas fa-eye"></i> {{ list.views }}</a>
+                        </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- Pagination -->
+        {% if news.has_other_pages %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if users.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ news.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% for i in news.paginator.page_range %}
+                    {% if news.number == i %}
+                    <li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}}</a></li>
+                    {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if news.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ news.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock detail %}
+{% endblock content %}

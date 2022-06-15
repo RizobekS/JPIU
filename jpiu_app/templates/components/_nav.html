@@ -1,0 +1,101 @@
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+<!--Top header start-->
+<header class="" style="background-color: #ced4da;">
+    <div class="container">
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <!-- Top Content -->
+                    <div class="col-12" style="padding: 10px 0px;">
+                        <div class="top-header-content d-flex justify-content-between">
+                            <a href="https://www.google.com/maps/place/Ministry+of+Economy/@41.3103208,69.2551131,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8b1a2e3db32f:0x52a6fae6f93d02da!8m2!3d41.3103083!4d69.25769"
+                               target="_blank"><i class="fas fa-map-marker-alt"></i> <span>{% trans "пр. Ислама Каримова 45А, Ташкент, Узбекистан, 100003" %}</span></a>
+                            <a href="mailto:ridp@mineconomy.uz"><i class="fa fa-envelope"></i>
+                                <span>ridp@mineconomy.uz</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Top header end-->
+
+<!--Center header start -->
+<div class="container">
+    <div class="row d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center col-9">
+            <div class="">
+                <img src="{% static '/jpiu_app/img-core/gerb2.png' %}" alt="Gerb" width="120px"
+                     class="">
+            </div>
+            <div class="text-center col-md-8 col-lg-7" style="text-transform: uppercase;"><h5><span
+                    style="color: #1B3D6D;">Объеденённая Группа реализации проектов</span><br> При Министерстве
+                экономического развития и сокращения бедности Республики Узбекистан</h5>
+
+            </div>
+        </div>
+        <div class="col-3 text-center">
+            <h5 style="color: #1B3D6D;"><i class="fas fa-phone"></i>Позвонить нам:</h5>
+            <div>+99871 232-63-31</div>
+            <div>+99871 232-63-32</div>
+        </div>
+    </div>
+</div>
+<!--Center header end-->
+
+<!--Manage header start-->
+<div class="text-uppercase row-fluid mt-5 sticky-top"
+     style="background-color: #1B3D6D;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/jpiu_app/img-core/logo_nav_white2.png' %}" alt="Logo JPIU" width="60">
+                </a>
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="quick-link" href="{% url 'news' %}">{% translate "Новости" %}</a>
+                        <a class="quick-link" href="{% url 'our-projects' %}">{% translate "Проекты" %}</a>
+                        <a class="quick-link" href="#">{% translate "Документы" %}</a>
+                        <a class="quick-link" href="#">{% translate "О нас" %}</a>
+                        <a class="quick-link" href="#">{% translate "Контакты" %}</a>
+                        <a class="quick-link" href="#">{% translate "Часто задаваемые вопросы" %}</a>
+
+                    </div>
+                    <div class="">
+                        <form id="lang_changer" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}"/>
+                            <select class="form-control form-control-sm" name="language"  id="language"
+                                    onchange="this.form.submit();" required>
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% for lang in LANGUAGES %}
+                                <option value="{{ lang.0 }}"
+                                        {% if lang.0 == LANGUAGE_CODE %}
+                                            selected
+                                        {% endif %}>
+                                    {{ lang.1 }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </form>
+                    </div>
+                </div>
+        </nav>
+    </div>
+</div>
+<!--Manage header end-->

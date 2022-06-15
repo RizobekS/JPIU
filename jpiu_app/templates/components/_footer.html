@@ -1,0 +1,137 @@
+{% load static %}
+{% load i18n %}
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white" style="background-color: #1B3D6D;">
+    <!-- Section: Social media -->
+    <section
+            class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>{% translate "Присоединяйтесь к нам в социальных сетях:" %}</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4 text-center">
+                        <a href="{% url 'index' %}"><img src="{% static '/jpiu_app/img-core/logo_nav_white2.png' %}"
+                                                         alt="Logo JPIU" width="120px"></a>
+                    </h6>
+                    <p class="text-center text-uppercase">
+                        <a href="{% url 'index' %}" class="quick-link">
+                            {% translate "ОБЪЕДЕНЁННАЯ ГРУППА РЕАЛИЗАЦИИ ПРОЕКТОВ ПРИ МИНИСТЕРСТВЕ ЭКОНОМИЧЕСКОГО РАЗВИТИЯ И СОКРАЩЕНИЯ БЕДНОСТИ РЕСПУБЛИКИ УЗБЕКИСТАН" %}</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        {% translate "Ссылки" %}
+                    </h6>
+                    <p>
+                        <a href="{% url 'news' %}" class="quick-link">{% translate "Новости" %}</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'our-projects' %}" class="quick-link">{% translate "Проекты" %}</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="quick-link">{% translate "Документы" %}</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="quick-link">{% translate "О нас" %}</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="quick-link">{% translate "Контакты" %}</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="quick-link">{% translate "Часто задаваемые вопросы" %}</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Opening Hours -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase"><i class="fas fa-business-time fa-sm"></i>{% translate "Часы работы"%}</h6>
+
+
+                    <div class="col-12">
+                        <div class="opening-hours__child mt-4">
+                            <span>{% translate "Пон-Пят"%}</span>
+                            <span>9.00-18.00</span>
+                        </div>
+                        <div class="opening-hours__child mt-3">
+                            <span>{% translate "Суб" %}</span>
+                            <span>{% translate "Выходной"%}</span>
+                        </div>
+                        <div class="opening-hours__child mt-3">
+                            <span>{% translate "Вос" %}</span>
+                            <span>{% translate "Выходной"%}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Opening Hours -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        {% translate "Контакты" %}
+                    </h6>
+                    <p>
+                        <a href="https://www.google.com/maps/place/Ministry+of+Economy/@41.3103208,69.2551131,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8b1a2e3db32f:0x52a6fae6f93d02da!8m2!3d41.3103083!4d69.25769"
+                           class="quick-link" target="_blank"><i class="fas fa-map-marker-alt"></i> <span>{% translate "пр. Ислама Каримова 45А, Ташкент, Узбекистан, 100003" %}</span></a>
+                    </p>
+                    <p>
+                        <a href="mailto:ridp@mineconomy.uz" class="quick-link"><i class="fas fa-envelope me-3"></i>
+                            <span>ridp@mineconomy.uz</span></a>
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i>+99871 232-63-31</p>
+                    <p><i class="fas fa-phone me-3"></i>+99871 232-63-32</p>
+
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center text-muted p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © {% translate "МИНИСТЕРСТВО ЭКОНОМИЧЕСКОГО РАЗВИТИЯ И СОКРАЩЕНИЯ БЕДНОСТИ РЕСПУБЛИКИ УЗБЕКИСТАН" %}
+        <script>document.write(new Date().getFullYear());</script>
+
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->

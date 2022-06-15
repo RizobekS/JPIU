@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="row-fluid mb-5">
+    <div class="bg-image"
+         style="background-image: url({% static 'jpiu_app/img-core/bg-images/construction-workers-sunset.jpg' %});
+                height: 300px;">
+
+        <div class="mask" style="background-color: rgba(15, 15, 100, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <p class="text-white mb-0 h1">{% translate "Наши проекты" %}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="d-flex justify-content-between mt-5 mb-5 row">
+        <div class="col-sm-12 col-md-6 text-center">
+            <a href="http://ridp.uz/en" target="_blank"><img src="{% static '/jpiu_app/img-core/ridp_logo.png' %}"
+                                                             alt="RIDP Logo"
+                                                             class="img-fluid" height="300px" width="300px"></a>
+            <h3 class="text-center mt-2">
+                <a href="http://ridp.uz/en" target="_blank">{% translate "Проект развития сельской инфраструктуры" %}</a>
+            </h3>
+            <p>
+                {% translate "Министерство экономического развития и сокращения бедности в 2020-2024 гг. реализует проект «Развитие сельской инфраструктуры», в рамках которого более 300 сел в Андижанской, Ферганской, Наманганской, Джизакской и Сырдарьинской областях Узбекистана смогут получить финансирование для улучшения качества базовой социальной инфраструктуры в данных населенных пунктах." %}
+            </p>
+
+        </div>
+        <div class="col-sm-12 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="{% static '/jpiu_app/img-core/ibr_logo.jpg' %}" alt="JPIU Logo" class="img-fluid"
+                     height="300px"
+                     width="300px">
+            </a>
+            <h3 class="text-center mt-2"><a href="#">{% translate "Устойчивое развитие сельской местности" %}</a></h3>
+            <p>
+                {% translate "Проект «Устойчивое развитие сельской местности» с участием Исламского банка развития и Фонда ОПЕК по международному развитию" %}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
